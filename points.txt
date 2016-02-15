@@ -1,0 +1,8 @@
+slide 1
+	remind what a group is
+	remind what a ring is
+	remind (via slide) what a field is
+	remind how finite fields work
+	make a note on dropping the "hat" for elements of a finite field
+slide 2
+	introduce elliptic curves
