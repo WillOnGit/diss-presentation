@@ -65,7 +65,9 @@ The points on an elliptic curve can be turned into a group via the ``chord-tange
 
 \begin{frame} % SLIDE 6
 \frametitle{The elliptic curve addition law}
-Hello
+For elliptic curves over a finite field $\mathbb{F}_p$, when adding points $(x_1,y_1) + (x_2,y_2) = (x',y')$,
+$$x'=\lambda^2 - a - x_1 - x_2,\quad y' = \lambda x_1 -\lambda x' - y_1 $$
+where $\lambda = \frac{y_2-y_1}{x_2-x_1}$ if $x_1\neq x_2$ or $\lambda=\frac{3x_1^2 + 2ax_1 + b}{2y_1}$ otherwise.
 \end{frame}
 
 \begin{frame} % SLIDE 7
@@ -84,7 +86,19 @@ Hello
 
 \begin{frame} % SLIDE 8
 \frametitle{Example}
-
+$$ N = 3103229009940552729864$$
+With $P = (3,1)$, $k=10!$ and $b = 39850$
+\begin{align*}
+(2191801374392476491053, 2332211434379395076998) + \\
+(406058948051076877967, 3156968592727602662096)
+\end{align*}
+is impossible, since 
+\begin{align*}
+2191801374392476491053-406058948051076877967 =\\
+1785742426341399613086
+\end{align*}
+and $\gcd(1785742426341399613086, N) = 3992747141$\\
+A simple division then gives $N = 3992747141 \times 791648724667$
 \end{frame}
 
 \end{document}
