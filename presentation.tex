@@ -1,11 +1,12 @@
 \documentclass{beamer}
 %\usetheme{Rochester}
-\title[Integer Factorisation with Elliptic Curves]{Integer Factorisation with Elliptic Curves}
+\usepackage{graphicx}
+\title[Integer Factorisation with Elliptic Curves over Finite Fields]{Integer Factorisation with Elliptic Curves over Finite Fields}
 \author{Will Bolton}
 \date{\today}
 
 \begin{document}
-\titlepage
+\titlepage % SLIDE 0
 \begin{frame} % SLIDE 1
 \frametitle{Fields and finite fields}
 \begin{definition}
@@ -29,6 +30,18 @@ So $\gcd(21,15)=3$
 \end{frame}
 
 \begin{frame} % SLIDE 3
+\frametitle{The Euclidean Algorithm}
+Using the steps of the algorithm, it is possible to calculate
+\begin{align*}
+	\gcd{21,15} = 3 &= 1\times15 - 2\times6\\
+	&= 15 - 2\times(21 - 1\times15)\\
+	&= 15 - 2\times21 + 2\times15\\
+	&=3\times15 - 2\times21
+\end{align*}
+So $3 = 3\times15 - 2\times21$
+\end{frame}
+
+\begin{frame} % SLIDE 4
 \frametitle{Elliptic curves and the projective plane}
 \begin{definition}
 	The projective plane is an extension of regular 2-dimensional euclidean space by adding ``points at infinity'' such that every pair of lines intersects exactly once.
@@ -38,19 +51,41 @@ So $\gcd(21,15)=3$
 \end{definition}
 \end{frame}
 
-\begin{frame} % SLIDE 4
+\begin{frame} % SLIDE 5
 \frametitle{The elliptic curve addition law}
 The points on an elliptic curve can be turned into a group via the ``chord-tangent law''
-\end{frame}
-
-\begin{frame} % SLIDE 5
-\frametitle{Lenstra's algorithm}
-\begin{definition}
-	Lenstra's algorithm goes as follows to factor an integer $N$:
-\end{definition}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.25]{addition.png}
+	\caption{The addition law on an elliptic curve\footnote{Diagram taken from http://crypto.stackexchange.com/questions/11518/what-is-so-special-about-elliptic-curves}}
+\end{figure}
 \end{frame}
 
 \begin{frame} % SLIDE 6
+\frametitle{The elliptic curve addition law}
+The points on an elliptic curve can be turned into a group via the ``chord-tangent law''
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.25]{addition.png}
+	\caption{The addition law on an elliptic curve\footnote{Diagram taken from http://crypto.stackexchange.com/questions/11518/what-is-so-special-about-elliptic-curves}}
+\end{figure}
+\end{frame}
+
+\begin{frame} % SLIDE 7
+\frametitle{Lenstra's algorithm}
+\begin{definition}
+	Lenstra's algorithm goes roughly as follows to factor an integer $N$:
+	\begin{itemize}
+		\item Choose random integers $b$, $x$ and $y \mod N$
+		\item Let $P = (x,y)$ and $c:=y^2-x^3-bx$ such that $P$ is a point on the curve $C: Y^2 = X^3 +bX + c \mod N$
+		\item Compute $kP$ for large $k$ ($k=10!$, for example)
+		\item If the computation of $kP$ is successful, increment $b$ and restart
+		\item Continue until one of the additions fails
+	\end{itemize}
+\end{definition}
+\end{frame}
+
+\begin{frame} % SLIDE 8
 \frametitle{Example}
 
 \end{frame}
