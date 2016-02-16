@@ -17,9 +17,11 @@ slide 3
 slide 4
 	introduce elliptic curve addition law
 	mention how it works if you reduce the curves mod p
+	give explicit formulae for finite field addition
 
 slide 5
 	introduce lenstra's algorithm
 
 slide 6
 	do some examples with lenstra's algorithm
+	discuss applications? like rsa?
