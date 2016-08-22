@@ -1,0 +1,1 @@
+The presentation component of my dissertation. This presentation was delivered in February 2016, around two months before the hand in of the written document. The written document and related python are available in two other repositories, dissertation and diss-python respectively.
