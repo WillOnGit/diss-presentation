@@ -1,3 +1,7 @@
+slide 0
+	introduction
+		factorisation, brute force method
+		goal: lenstra's algorithm
 slide 1
 	remind what a group is
 	remind what a ring is
@@ -7,18 +11,20 @@ slide 1
 
 slide 2 & 3
 	remind people of the euclidean algorithm 
-	introduce modular exponentiation(?)
+	explain importance for finding modular inverses
 
 slide 4
 	introduce projective plane and points at infinity
 	introduce elliptic curves and their properties
-	regular is well-defined tangents everywhere
+		regular is well-defined tangents everywhere
 	mention that we will be working with the "affine" part of curves, and so the point at infinity sort of vanishes
 
 slide 5 & 6
 	introduce elliptic curve addition law
 	mention how it works if you reduce the curves mod p
 	give explicit formulae for finite field addition
+		explain what lambda is
+		clarify "division"
 
 slide 7
 	introduce lenstra's algorithm
