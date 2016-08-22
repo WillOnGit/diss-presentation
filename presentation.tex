@@ -5,7 +5,7 @@
 \beamertemplatenavigationsymbolsempty
 \title[Integer Factorisation with Elliptic Curves over Finite Fields]{Integer Factorisation with Elliptic Curves over Finite Fields}
 \author{Will Bolton}
-\date{\today}
+\date{February 16, 2016}
 
 \begin{document}
 \titlepage % SLIDE 0
@@ -15,7 +15,7 @@
 	A field is a commutative, unital ring in which every non-zero element is invertible
 \end{definition}
 \vfill
-	The group $Z_n$ is a field if and only if $n$ is prime.
+	The group $\mathbb{Z}_n$ is a field if and only if $n$ is prime.
 \end{frame}
 
 \begin{frame} % SLIDE 2
@@ -24,7 +24,7 @@
 	The euclidean algorithm takes two numbers and returns their \emph{greatest common divisor (gcd)} by repeated division with remainder.
 \end{definition}
 \begin{align*}
-	\gcd{21,15}:21 &= 1\times15 + 6\\
+	\gcd(21,15):21 &= 1\times15 + 6\\
 	15 &= 2\times6 + 3\\
 	6 &= 2\times3 + 0\\
 \end{align*}
@@ -35,7 +35,7 @@ So $\gcd(21,15)=3$
 \frametitle{The Euclidean Algorithm}
 Using the steps of the algorithm, it is possible to calculate
 \begin{align*}
-	\gcd{21,15} = 3 &= 1\times15 - 2\times6\\
+	\gcd(21,15) = 3 &= 1\times15 - 2\times6\\
 	&= 15 - 2\times(21 - 1\times15)\\
 	&= 15 - 2\times21 + 2\times15\\
 	&=3\times15 - 2\times21
